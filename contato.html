@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechZone - Contato</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Nosso CSS personalizado -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar (igual em todas as páginas) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" alt="TechZone" width="40"> TechZone
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main class="container my-5 pt-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-9 col-lg-7">
+
+        <!-- Botão Voltar para Home -->
+        <div class="mb-4">
+          <a href="index.html" class="btn-voltar btn btn-outline-secondary">
+            Voltar para a Página Inicial
+          </a>
+        </div>
+
+        <h1 class="text-center mb-5">Fale Conosco</h1>
+
+        <!-- Formulário -->
+        <form id="formContato" class="shadow-lg p-4 p-md-5 rounded" novalidate>
+
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome completo <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="nome" required minlength="3" placeholder="Digite seu nome completo">
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">E-mail <span class="text-danger">*</span></label>
+            <input type="email" class="form-control" id="email" required placeholder="seu@email.com">
+          </div>
+
+          <div class="mb-3">
+            <label for="telefone" class="form-label">Telefone</label>
+            <input type="tel" class="form-control" id="telefone" placeholder="(11) 98765-4321">
+          </div>
+
+          <div class="mb-3">
+            <label for="interesse" class="form-label">Tecnologia de interesse <span class="text-danger">*</span></label>
+            <select class="form-select" id="interesse" required>
+              <option value="" selected disabled>Selecione uma opção</option>
+              <option>Celulares</option>
+              <option>Notebooks</option>
+              <option>Redes e Conectividade</option>
+              <option>Monitores</option>
+              <option>Headsets e Acessórios</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label">Canal preferencial de contato</label><br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="canal" value="E-mail" id="canalEmail">
+              <label class="form-check-label" for="canalEmail">E-mail</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="canal" value="WhatsApp" id="canalWhats">
+              <label class="form-check-label" for="canalWhats">WhatsApp</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="canal" value="Telefone" id="canalTel">
+              <label class="form-check-label" for="canalTel">Telefone</label>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label for="mensagem" class="form-label">Mensagem <span class="text-danger">*</span></label>
+            <textarea class="form-control" id="mensagem" rows="5" required 
+                      placeholder="Escreva aqui sua dúvida, sugestão ou solicitação..."></textarea>
+          </div>
+
+          <div class="mb-4 form-check">
+            <input type="checkbox" class="form-check-input" id="concordar" required>
+            <label class="form-check-label" for="concordar">
+              Autorizo o contato conforme a política de privacidade <span class="text-danger">*</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-success btn-lg w-100">
+            Enviar Mensagem
+          </button>
+        </form>
+
+        <!-- Mensagem de retorno após envio -->
+        <div id="mensagemRetorno" class="mt-4" style="display: none;"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+      <p>TechZone © 2025 - Todos os direitos reservados</p>
+      <p><a href="contato.html" class="text-white">Fale conosco</a></p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS + Nosso JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

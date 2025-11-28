@@ -1,0 +1,206 @@
+body { font-family: 'Segoe UI', sans-serif; padding-top: 76px; }
+.hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/rede.jpg') center/cover no-repeat; 
+        min-height: 80vh; display: flex; align-items: center; }
+.card:hover { transform: translateY(-10px); transition: .3s; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+.btn-primary:hover { background-color: #0d6efd; }
+
+footer a::after { content: " ➜"; }
+
+/* ==================== ESTILIZAÇÃO DO FORMULÁRIO DE CONTATO ==================== */
+#formContato {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+}
+
+#formContato .form-label {
+    font-weight: 600;
+    color: #333;
+}
+
+#formContato .form-control,
+#formContato .form-select {
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+}
+
+#formContato .form-control:focus,
+#formContato .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Botão Enviar maior e mais bonito */
+#formContato button[type="submit"] {
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+/* Mensagem de retorno */
+#mensagemRetorno {
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1.2rem;
+    border-radius: 10px;
+}
+
+/* Botão Voltar para Home */
+.btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-voltar:hover {
+    transform: translateX(-5px);
+}
+
+/* Pseudo-elemento no botão voltar */
+.btn-voltar::before {
+    content: "←";
+    font-weight: bold;
+}
+
+/* ==================== PÁGINA PRODUTOS - ESTILIZAÇÃO COMPLETA ==================== */
+
+/* Título da página */
+#listaProdutos + h2,
+main h2 {
+  font-weight: 700;
+  color: #2c3e50;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+main h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #0d6efd;
+  border-radius: 2px;
+}
+
+/* Cards dos produtos */
+.produto .card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+}
+
+.produto .card img {
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.produto .card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+}
+
+.produto .card:hover img {
+  transform: scale(1.08);
+}
+
+.produto .card-body {
+  padding: 1.5rem;
+}
+
+.produto .card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.produto .card-text {
+  color: #718096;
+}
+
+/* Botão "Ver detalhes" */
+.btn-detalhes {
+  background: #0d6efd;
+  border: none;
+  padding: 0.65rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-detalhes:hover {
+  background: #0b5ed7;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(13,110,253,0.3);
+}
+
+/* Modal personalizado */
+.modal-content {
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.modal-header {
+  border-bottom: none;
+  padding: 1.5rem 2rem;
+  background: #0d6efd;
+  color: white;
+  border-radius: 16px 16px 0 0;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+.modal-title {
+  font-weight: 700;
+}
+
+.modal-body {
+  padding: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Tabela comparativa (caso você coloque uma) */
+.table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.table th {
+  background: #0d6efd;
+  color: white;
+  font-weight: 600;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+/* Responsividade extra */
+@media (max-width: 768px) {
+  .produto .card img {
+    height: 180px;
+  }
+  #formContato {
+    padding: 2rem 1.5rem;
+  }
+}
